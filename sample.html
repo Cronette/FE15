@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>Sample Form</title>
+    <script language="JavaScript">
+    function showInput() {
+        document.getElementById('display').innerHTML = 
+                    document.getElementById("fname").value;
+        document.getElementById('display1').innerHTML = 
+                    document.getElementById("univ").value;
+        document.getElementById('display2').innerHTML = 
+                    document.getElementById("email").value;           
+        console.log(document.getElementById("fname").value+"\n"+document.getElementById("email").value+"\n"+document.getElementById("univ").value);
+    }
+  </script>
+  <style>
+    body {background-color: powderblue;}
+    span {color:red;}
+    label {color: blueviolet;}
+    div {border: 10px solid whitesmoke;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-right: 150px;
+        margin-left: 80px;
+        background-color: black;}
+  </style>
+</head>
+<body>
+    <form>
+    <label for="fname">Full Name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="univ">University:</label><br>
+    <input type="text" id="univ" name="univ"><br>
+    <label for="email">E-mail:</label><br>
+    <input type="text" id="email" name="email"><br>
+    <button type='button' onclick="showInput();">submit</button> 
+    </form>
+    <div>
+      <label>Name :</label>
+      <span id='display'></span></br>
+      <label>University :</label>
+      <span id='display1'></span></br>
+      <label>Email :</label>
+      <span id='display2'></span></br>
+    </div>
+</body>
+</html>
